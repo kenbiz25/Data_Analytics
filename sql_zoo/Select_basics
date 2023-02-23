@@ -11,6 +11,6 @@
 | Angola      |Africa	  |1246700|	20609294  |100990000000 
 +-------------+----------+------+------+----+-------------+   
 */
-SELECT name, area 
+SELECT name, area
 FROM world
-  WHERE area BETWEEN 200000 AND 250000
+WHERE population >=100000;
