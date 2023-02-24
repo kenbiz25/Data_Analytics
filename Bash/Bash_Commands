@@ -1,8 +1,12 @@
 /*
+
+clear - clear terminal
+
 ls -a: List all the files in the current directory including hidden files too
 ls -l: Long listing of all the files and their size in the current directory
 
 cd (change directory) command is used to navigate the directory tree structure.
+cd .. go back one step
 
 rm (remove) command is used to delete files, directories or even symbolic links from your file system. Some of the most useful options are:
 rm-i: Remove all the files in the directory but let the user confirm before deleting it.
@@ -12,6 +16,7 @@ rm-f: Remove files or directories without prompting even if they are write-prote
 mv (move) command is used to move one or more directories or files from one location in the file system to another
 
 mv [OPTIONS] SOURCE DESTINATION
+
 SOURCE can be one or more directories or files
 DESTINATION can be a file (used for renaming files) or a directory (used for moving files and directories into other directories).
 
