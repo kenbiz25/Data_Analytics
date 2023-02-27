@@ -1,0 +1,120 @@
+/*We use SQL to
+create databases
+create tables in a database
+read data from a table
+insert data in a table
+update data in a table
+delete data from a table
+delete database tables
+delete databases
+and many more database operations*/
+
+/*SQL Operators - These are symbols (and keywords) that are used to perform operations with values.
+SQL Arithmetic Operators
+Operator	Description
++	Addition
+-	Subtraction
+*	Multiplication
+/	Divide
+%	Modulo (Remainder)
+<> except or also called not equal written also as !=*/
+
+/*The WHERE clause uses operators to construct conditions*/
+
+SELECT *
+FROM Customers
+WHERE first_name = 'John';
+
+
+SELECT *
+FROM Customers
+WHERE age > 25;
+
+SELECT *
+FROM Customers
+WHERE last_name = 'Doe' AND country = 'USA';
+
+
+/*--How to query from a table*/
+Select *
+From ;
+
+/*-- Specifying content*/
+SELECT population FROM world
+  WHERE name = 'Germany'
+  
+--Checking a list The word IN allows us to check if an item is in a list
+SELECT name, population 
+FROM world
+WHERE name IN ('sweden', 'Norway', 'Denmark');
+
+BETWEEN allows range checking (range specified is inclusive of boundary values)
+SELECT name, area FROM world
+  WHERE area BETWEEN 200000 AND 250000  
+  
+--italy 5 malta 5 spain 5  
+SELECT name,length(name)
+FROM world
+WHERE length(name)=5 and region='Europe'
+  
+  
+--The SQL AND operator selects data if all conditions are TRUE.
+
+SELECT first_name, last_name
+FROM Customers
+WHERE country = 'USA' AND last_name = 'Doe';
+
+--The SQL OR operator selects data if any one condition is TRUE
+SELECT first_name, last_name
+FROM Customers
+WHERE country = 'USA' OR last_name = 'Doe';
+
+--The SQL NOT operator selects data if the given condition is FALSE.
+SELECT first_name, last_name
+FROM Customers
+WHERE NOT country = 'USA';
+
+--combining
+
+SELECT *
+FROM Customers
+WHERE NOT country = 'USA' AND NOT last_name = 'Doe';
+
+SELECT *
+FROM Customers
+WHERE (country = 'USA' OR country = 'UK') AND age < 26;
+
+The SQL ORDER BY clause is used to sort the result set in either ascending or descending order. For example,
+
+SELECT *
+FROM Customers
+ORDER BY first_name;
+
+SELECT *
+FROM Customers
+ORDER BY age ASC;
+
+SELECT *
+FROM Customers
+ORDER BY age DESC;
+
+Here, the SQL command selects all the records and then sorts them by first_name. 
+If the first_name repeats more than once, it sorts those records by age.
+SELECT *
+FROM Customers
+ORDER BY first_name, age;
+
+Find the albums with 12 or more tracks.
+SELECT AlbumId, Count(*) AS Ntracks
+FROM Tracks
+GROUP BY AlbumId
+HAVING COUNT (*) >= 12
+
+Joins
+-- Innerjoin or join - The SQL JOIN joins two tables based on a common column, 
+and selects records that have only matching values in these columns.
+
+SELECT Customers.customer_id, Customers.first_name, Orders.amount
+FROM Customers
+JOIN Orders
+ON Customers.customer_id = Orders.customer;
