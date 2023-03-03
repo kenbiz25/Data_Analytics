@@ -4,5 +4,6 @@ Welcome to my repository. This is a contonuous collection of SQL and Python code
 
 ## File Directies and Contents
 
-| Entry | File Name | Issue | Solution Nest |
-| 1 | SQL | Selecting Name | SQL 2 |
+| Entry | File Name | Issue          | Solution Nest |
+|----------------------------------------------------|
+| 1     | SQL       | Selecting Name | SQL 2         |
